@@ -33,6 +33,7 @@ $ ls
 drop_monitor.c  drop_monitor.ko  drop_monitor.mod.c  drop_monitor.mod.o  drop_monitor.o  Makefile  modules.order  Module.symvers`
 ```
 4.加载内核模块：
+
 `$ insmod drop_monitor.ko`
 
 5.安装dropwatch
