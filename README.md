@@ -9,8 +9,10 @@ Unable to find NET_DM family, dropwatch can't work Cleaning up on socket creatio
 这个错误意味着Amazon Linux 2内核中CONFIG_NET_DROP_MONITOR模块没有编译加载。
 以下以内核版本为4.14.181为例编译drop_monitor模块，并加载到内核
 
-1.创建一个目录，下载drop_monitor.c源码：https://elixir.bootlin.com/linux/v4.14.181/source/net/core/drop_monitor.c
+1.创建一个目录，下载drop_monitor.c源码：
+https://elixir.bootlin.com/linux/v4.14.181/source/net/core/drop_monitor.c
 `$ mkdir ～/dropcd ~/drop`
+
 2.创建一个Makefile
 ```
 obj-m += drop_monitor.o   all:  make -C /lib/modules/$(shell uname -r)/build M=$(PWD) modules   clean:  make -C /lib/modules/$(shell uname -r)/build M=$(PWD) clean
